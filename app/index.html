@@ -1,21 +1,13 @@
 <html ng-app="phonecatApp">
-	<head>
-		<script src="bower_components/angular/angular.js"></script>
-		<script src="app.js"></script>
-	</head>
-	<body ng-controller="PhoneListController">
+		<head>
+				<script src="bower_components/angular/angular.js"></script>
+				<script src="app.js"></script>
+				<script src="phone-list.component.js"></script>
+		</head>
+		<body>
 
-		<ul>
-			<li ng-repeat="phone in phones">
-			<span>{{phone.name}}</span>
-			<p>{{phone.snippet}}</p>
-			</li>
-		</ul>
+				<!-- Use a custom component to render a list of phones -->
+				<phone-list></phone-list>
 
-		<table>
-				<tr><th>Row number</th></tr>
-				<tr ng-repeat="i in [0, 1, 2, 3, 4, 5, 6, 7]"><td>{{i+1}}</td></tr>
-		</table>
-
-	</body>
+		</body>
 </html>
